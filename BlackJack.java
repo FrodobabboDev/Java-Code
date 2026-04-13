@@ -64,8 +64,8 @@ public class BlackJack
         {
             Scanner input = new Scanner(System.in);
             Player current = players.get(i);
-            System.out.println(current.getName() + " - Chip Balance: " + current.getChipBalance());
-            System.out.print("Place your bet: ");
+            System.out.println("-------------\n" + current.getName() + " - Chip Balance: " + current.getChipBalance());
+            System.out.print("\n-------------\nPlace your bet: ");
             int bet = input.nextInt();
             current.placeBet(bet);
         }
@@ -116,6 +116,7 @@ public class BlackJack
         {
             System.out.println("1. Hit");
             System.out.println("2. Stand");
+            System.out.println("\nEnter choice: ");
             int choice = input.nextInt();
 
             if(choice == 1) //hit
